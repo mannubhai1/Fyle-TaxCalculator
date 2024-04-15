@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Fyle</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inContainer1">
+        <h1>Tax Calculator</h1>
+      </div>
+      <div class="inContainer2">
+        <form id="taxForm">
+          <div class="form-group">
+            <label for="income">Enter Gross Annual Income</label>
+            <i
+              class="incomeQues fa fa-question-circle-o"
+              aria-hidden="true"
+            ></i>
+            <input
+              class="form-control"
+              id="income"
+              name="income"
+              placeholder="Enter gross annual income"
+              required
+            />
+            <div class="error-message">Please enter a valid number</div>
+            <i class="error-icon fa-thin fa-circle-exclamation">!</i>
+          </div>
+          <div class="form-group">
+            <label for="extraIncome">Enter Extra Income</label>
+            <i
+              class="eIncomeQues fa fa-question-circle-o"
+              aria-hidden="true"
+            ></i>
+            <input
+              class="form-control"
+              id="extraIncome"
+              name="extraIncome"
+              placeholder="Enter Extra income from other sources"
+              required
+            />
+            <div class="error-message">Please enter a valid number</div>
+            <i class="error-icon fa-thin fa-circle-exclamation">!</i>
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <i class="ageQues fa fa-question-circle-o" aria-hidden="true"></i>
+            <!-- <select class="form-control" id="age" required>
+              <option value="" selected>Please select</option>
+              <option value="<40">&lt; 40</option>
+              <option value="≥ 40 &lt; 60">&ge; 40 &lt; 60</option>
+              <option value="≥ 60">&ge; 60</option>
+            </select> -->
+            <input
+              type="number"
+              class="form-control"
+              id="age"
+              name="age"
+              placeholder="Enter your age"
+              required
+            />
+            <div class="error-message">Please enter a valid number</div>
+            <i class="error-icon fa-thin fa-circle-exclamation">!</i>
+          </div>
+          <div class="form-group">
+            <label for="deductions">Enter total applicable deductions</label>
+            <i
+              class="deductionsQues fa fa-question-circle-o"
+              aria-hidden="true"
+            ></i>
+            <input
+              class="form-control"
+              id="deductions"
+              name="deductions"
+              placeholder="Add total applicable deductions"
+              required
+            />
+            <div class="error-message">Please enter a valid number</div>
+            <i class="error-icon fa-thin fa-circle-exclamation">!</i>
+          </div>
+          <div class="button">
+            <button type="submit" id="submit" class="btn btn-primary">
+              Calculate Tax
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="resultModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="resultModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resultModalLabel">
+              Tax Calculation Result
+            </h5>
+            <button
+              type="button"
+              id="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span class="cross" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modalBody">
+            <!-- Tax calculation result will be displayed here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
