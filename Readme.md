@@ -21,7 +21,7 @@ This is a simple tax calculator web application that allows users to calculate t
 1. Clone this repository to your local machine:
 
 ```
-git clone https://github.com/ChatGPT-Tasks/tax-calculator.git
+git clone https://github.com/mannubhai1/Fyle-TaxCalculator.git
 
 ```
 
